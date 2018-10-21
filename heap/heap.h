@@ -9,6 +9,7 @@
 #include <cmath>
 #include <assert.h>
 #include <typeinfo>
+#include <array>
 
 using namespace std;
 
@@ -188,5 +189,16 @@ private:
         string2[right_offset] = '\\';
     }
 };
+
+template <typename T>
+void heapSort1(T array[],int n){
+    MaxHeap<T> maxHeap =MaxHeap<T>(n);
+    for (int i = 0; i < n; ++i) {
+        maxHeap.insert(array[i]);
+    }
+    for (int i = 0; i < n; ++i) {
+        array[i] = maxHeap.extractMax();
+    }
+}
 
 #endif //ALGORITHMS_AND_DATA_STRUCTURES_HEAP_H
