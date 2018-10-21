@@ -8,6 +8,7 @@
 #include <iostream>
 #include <cmath>
 #include <assert.h>
+#include <typeinfo>
 
 using namespace std;
 
@@ -23,7 +24,7 @@ private:
 //
     void shiftUp(int k){
 //        从第k个元素开始,将k个k的父元素k/2进行比较,如果data[k]>data[k/2]就进行交换,一直到k等于1
-        while (data[k]>data[k/2]){
+        while (k>1&&data[k]>data[k/2]){
             swap(data[k],data[k/2]);
             k/=2;
         }
@@ -53,6 +54,30 @@ public:
         shiftUp(count);
     }
 
+    void shiftDown(int k) {
+        while (2*k<=size()){
+            int j = 2*k;
+            if (j+1<=size()&&data[j+1]>data[j]){
+                j++;
+            }
+            if (data[k]<data[j]){
+                swap(data[k],data[j]);
+            } else{
+                break;
+            }
+            k = j;
+        }
+
+    }
+
+    int extractMax(){
+        int result = data[1];
+        swap(data[count],data[1]);
+        count--;
+        shiftDown(1);
+        return result;
+    }
+
 
 //    展示堆
     void showHeap(){
@@ -72,7 +97,7 @@ public:
         cout<<"Data in the max heap: ";
 
         for (int i = 1; i <=size(); ++i) {
-            assert(data[i]>0&&data[i]<100);
+            assert(data[i]>=0&&data[i]<100);
             cout<<data[i]<<" ";
         }
 

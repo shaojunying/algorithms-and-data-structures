@@ -6,11 +6,14 @@
 using namespace std;
 
 int main() {
-    MaxHeap<int> maxHeap = MaxHeap<int>(100);
+    MaxHeap<int> maxHeap = MaxHeap<int>(50);
     srand(static_cast<unsigned int>(time(nullptr)));
     for (int i = 0; i < 50; ++i) {
-        maxHeap.insert(rand()%20);
+        maxHeap.insert(rand()%1000);
     }
-    maxHeap.showHeap();
+//    maxHeap.showHeap();
+    for (int i = 0; i < 50; ++i) {
+        cout<<maxHeap.extractMax()<<" ";
+    }
     return 0;
 }
