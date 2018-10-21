@@ -15,13 +15,13 @@ int main() {
 //    for (int i = 0; i < 50; ++i) {
 //        cout<<maxHeap.extractMax()<<" ";
 //    }
-    int a[100];
+    int* a = new int[5000];
     srand(static_cast<unsigned int>(time(nullptr)));
-    for (int i = 0; i < 100; ++i) {
+    for (int i = 0; i < 5000; ++i) {
         a[i]=rand()%1000;
     }
-    heapSort1(a,100);
-    for (int j = 0; j < 100; ++j) {
+    heapSort2(a,5000);
+    for (int j = 0; j < 5000; ++j) {
         cout<<a[j]<<" ";
     }
 

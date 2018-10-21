@@ -13,6 +13,9 @@
   <component name="ChangeListManager">
     <list default="true" id="b835108f-3918-45fb-b9e2-84974e6cd88a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/algorithms_and_data_structures.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/algorithms_and_data_structures.dir/main.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/algorithms_and_data_structures.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/algorithms_and_data_structures.dir/objects.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/algorithms_and_data_structures.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/algorithms_and_data_structures.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/heap/heap.h" beforeDir="false" afterPath="$PROJECT_DIR$/heap/heap.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
@@ -38,13 +41,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="3278" />
-          <entry key="h" value="1092" />
+          <entry key="cpp" value="3457" />
+          <entry key="h" value="1672" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="ObjectiveC" value="4370" />
+          <entry key="ObjectiveC" value="5129" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -67,11 +70,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+            <state relative-caret-position="389">
+              <caret line="27" column="20" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -79,26 +82,25 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/heap/heap.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="199" column="40" selection-start-line="199" selection-start-column="40" selection-end-line="199" selection-end-column="40" />
+            <state relative-caret-position="-877">
+              <caret line="38" column="33" selection-start-line="38" selection-start-column="33" selection-end-line="38" selection-end-column="33" />
               <folding>
                 <element signature="e#134#153#0" expanded="true" />
                 <element signature="e#182#197#0" expanded="true" />
-                <element signature="e#339#540#0" />
                 <element signature="e#550#706#0" />
                 <element signature="e#711#752#0" />
                 <element signature="e#757#796#0" />
                 <element signature="e#801#849#0" />
                 <element signature="e#854#955#0" />
-                <element signature="e#995#1020#0" />
                 <element signature="e#999#1032#0" />
                 <element signature="e#958#2953#0" />
                 <element signature="e#2965#3798#0" />
                 <element signature="e#3762#4268#0" />
                 <element signature="e#5532#5544#0" expanded="true" />
+                <element signature="e#6029#6041#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -119,8 +121,8 @@
       <list>
         <option value="$PROJECT_DIR$/heap.h" />
         <option value="$PROJECT_DIR$/heap/heap.cpp" />
-        <option value="$PROJECT_DIR$/heap/heap.h" />
         <option value="$PROJECT_DIR$/main.cpp" />
+        <option value="$PROJECT_DIR$/heap/heap.h" />
       </list>
     </option>
   </component>
@@ -132,8 +134,9 @@
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="952" />
-    <option name="width" value="977" />
+    <option name="x" value="-35" />
+    <option name="y" value="-15" />
+    <option name="width" value="1425" />
     <option name="height" value="1050" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -215,12 +218,12 @@
       <workItem from="1538558690767" duration="1106000" />
       <workItem from="1539858628557" duration="26000" />
       <workItem from="1540038897545" duration="5423000" />
-      <workItem from="1540089942302" duration="7710000" />
+      <workItem from="1540089942302" duration="10881000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21882000" />
+    <option name="totallyTimeSpent" value="25053000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -235,18 +238,18 @@
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26541555" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.54771787" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.4013986" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.47765362" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.68251747" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.47692308" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32960895" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.84335667" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.84615386" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="11" show_stripe_button="false" />
@@ -257,18 +260,18 @@
       <window_info anchor="right" id="Database" order="3" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26541555" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.54771787" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.40223464" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.46153846" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.47765362" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32960895" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.49022347" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.36783215" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="11" show_stripe_button="false" />
@@ -325,35 +328,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="27" column="20" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/heap/heap.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="199" column="40" selection-start-line="199" selection-start-column="40" selection-end-line="199" selection-end-column="40" />
+        <state relative-caret-position="-877">
+          <caret line="38" column="33" selection-start-line="38" selection-start-column="33" selection-end-line="38" selection-end-column="33" />
           <folding>
             <element signature="e#134#153#0" expanded="true" />
             <element signature="e#182#197#0" expanded="true" />
-            <element signature="e#339#540#0" />
             <element signature="e#550#706#0" />
             <element signature="e#711#752#0" />
             <element signature="e#757#796#0" />
             <element signature="e#801#849#0" />
             <element signature="e#854#955#0" />
-            <element signature="e#995#1020#0" />
             <element signature="e#999#1032#0" />
             <element signature="e#958#2953#0" />
             <element signature="e#2965#3798#0" />
             <element signature="e#3762#4268#0" />
             <element signature="e#5532#5544#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#6029#6041#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -30,6 +30,21 @@ private:
             k/=2;
         }
     }
+    void shiftDown(int k) {
+        while (2*k<=size()){
+            int j = 2*k;
+            if (j+1<=size()&&data[j+1]>data[j]){
+                j++;
+            }
+            if (data[k]<data[j]){
+                swap(data[k],data[j]);
+                k = j;
+            } else{
+                break;
+            }
+        }
+
+    }
 
 public:
 //    让用户指定堆的大小
@@ -38,6 +53,17 @@ public:
         data = new Item[capacity+1];
         this->capacity=capacity;
         count = 0;
+    }
+    MaxHeap(Item array[], int n){
+        data = new Item[n+1];
+        capacity = n;
+        count= n;
+        for (int i = 0; i < n; ++i) {
+            data[i+1] = array[i];
+        }
+        for (int i = n/2; i >= 1; --i) {
+            shiftDown(i);
+        }
     }
     ~MaxHeap(){
         delete [] data;
@@ -55,21 +81,6 @@ public:
         shiftUp(count);
     }
 
-    void shiftDown(int k) {
-        while (2*k<=size()){
-            int j = 2*k;
-            if (j+1<=size()&&data[j+1]>data[j]){
-                j++;
-            }
-            if (data[k]<data[j]){
-                swap(data[k],data[j]);
-            } else{
-                break;
-            }
-            k = j;
-        }
-
-    }
 
     int extractMax(){
         int result = data[1];
@@ -196,6 +207,14 @@ void heapSort1(T array[],int n){
     for (int i = 0; i < n; ++i) {
         maxHeap.insert(array[i]);
     }
+    for (int i = 0; i < n; ++i) {
+        array[i] = maxHeap.extractMax();
+    }
+}
+
+template <typename T>
+void heapSort2(T array[], int n){
+    MaxHeap<T> maxHeap = MaxHeap<T>(array,n);
     for (int i = 0; i < n; ++i) {
         array[i] = maxHeap.extractMax();
     }
