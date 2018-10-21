@@ -18,6 +18,10 @@ typeinfo
 array
 -
 
+C:/Users/shao/Documents/codingProject/algorithms-and-data-structures/heap/heapSort.h
+heap.h
+C:/Users/shao/Documents/codingProject/algorithms-and-data-structures/heap/heap.h
+
 C:/Users/shao/Documents/codingProject/algorithms-and-data-structures/main.cpp
 iostream
 -
@@ -27,4 +31,6 @@ cstdlib
 -
 heap/heap.h
 C:/Users/shao/Documents/codingProject/algorithms-and-data-structures/heap/heap.h
+heap/heapSort.h
+C:/Users/shao/Documents/codingProject/algorithms-and-data-structures/heap/heapSort.h
 
