@@ -3,41 +3,22 @@
 #include <cstdlib>
 #include "heap/heap.h"
 #include "heap/heapSort.h"
+#include "heap/indexHeap.h"
 
 using namespace std;
 
 int main() {
-//    MaxHeap<int> maxHeap = MaxHeap<int>(50);
-//    srand(static_cast<unsigned int>(time(nullptr)));
-//    for (int i = 0; i < 50; ++i) {
-//        maxHeap.insert(rand()%1000);
-//    }
-////    maxHeap.showHeap();
-//    for (int i = 0; i < 50; ++i) {
-//        cout<<maxHeap.extractMax()<<" ";
-//    }
-//    int* a = new int[5000];
-//    srand(static_cast<unsigned int>(time(nullptr)));
-//    for (int i = 0; i < 5000; ++i) {
-//        a[i]=rand()%1000;
-//    }
-//    heapSort2(a,5000);
-//    for (int j = 0; j < 5000; ++j) {
-//        cout<<a[j]<<" ";
-//    }
 
-    int a[100];
+    MaxIndexHeap<int> maxIndexHeap = MaxIndexHeap<int>(100);
 
-    for (int i = 0; i < 100; ++i) {
-        a[i]=rand()%100;
+    srand(static_cast<unsigned int>(time(nullptr)));
+    for (int i = 0; i < 50; ++i) {
+        maxIndexHeap.insert(i,rand()%100);
     }
-
-    heapSort3(a,100);
-
-    for (int i = 0; i < 100; ++i) {
-        cout<<a[i]<<" ";
+    for (int j = 0; j < 50; ++j) {
+        int result_index = maxIndexHeap.extractMax();
+        cout<<maxIndexHeap.getItem(result_index)<<" ";
     }
-    cout<<endl;
 
     return 0;
 }

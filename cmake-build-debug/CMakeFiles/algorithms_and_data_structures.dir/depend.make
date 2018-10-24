@@ -3,5 +3,6 @@
 
 CMakeFiles/algorithms_and_data_structures.dir/main.cpp.obj: ../heap/heap.h
 CMakeFiles/algorithms_and_data_structures.dir/main.cpp.obj: ../heap/heapSort.h
+CMakeFiles/algorithms_and_data_structures.dir/main.cpp.obj: ../heap/indexHeap.h
 CMakeFiles/algorithms_and_data_structures.dir/main.cpp.obj: ../main.cpp
 

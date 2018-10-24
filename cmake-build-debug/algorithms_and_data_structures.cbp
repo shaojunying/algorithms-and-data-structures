@@ -88,6 +88,9 @@
 		<Unit filename="C:/Users/shao/Documents/codingProject/algorithms-and-data-structures/heap/heapSort.h">
 			<Option target="algorithms_and_data_structures"/>
 		</Unit>
+		<Unit filename="C:/Users/shao/Documents/codingProject/algorithms-and-data-structures/heap/indexHeap.h">
+			<Option target="algorithms_and_data_structures"/>
+		</Unit>
 		<Unit filename="C:/Users/shao/Documents/codingProject/algorithms-and-data-structures/main.cpp">
 			<Option target="algorithms_and_data_structures"/>
 		</Unit>
