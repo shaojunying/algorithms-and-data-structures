@@ -1,5 +1,5 @@
 # algorithms-and-data-structures
-[TOC]
+<!--TOC-->
 
 ## 堆
 
@@ -12,7 +12,7 @@
 
 同时在heap.h中实现了简单的堆的图形化输出操作
 
-##### heapsort.h中实现了三个排序操作
+##### heapSort.h中实现了三个排序操作
 
 - 算法1:
 
