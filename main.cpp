@@ -13,7 +13,7 @@ int main() {
 
     srand(static_cast<unsigned int>(time(nullptr)));
     for (int i = 0; i < 50; ++i) {
-        maxIndexHeap.insert(i,rand()%100);
+        maxIndexHeap.insert(i,rand()%1000);
     }
     for (int j = 0; j < 50; ++j) {
         int result_index = maxIndexHeap.extractMax();

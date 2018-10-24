@@ -85,16 +85,31 @@ public:
     }
 
     Item getItem(int i){
-        return data[index[i]];
+        return data[i];
     }
 
+    void change(int i,Item item){
+        i++;
+        data[i]=item;
+
+        for (int j = 0; j < count; ++j) {
+            if (index[j] == i){
+                __shiftDown(j);
+                __shiftUp(j);
+                return;
+            }
+        }
+
+    }
+
+//    此处返回的是最大值在data中的下标
     int extractMax() {
         assert(count>0);
-        int result = index[1];
+        int result_index = index[1];
         swap(index[count], index[1]);
         count--;
         __shiftDown(1);
-        return result;
+        return result_index;
     }
 };
 
