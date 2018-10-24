@@ -2,12 +2,12 @@
 // Created by shao on 2018/10/24.
 //
 
-#ifndef ALGORITHMS_AND_DATA_STRUCTURES_UNIONFIND1_H
-#define ALGORITHMS_AND_DATA_STRUCTURES_UNIONFIND1_H
+#ifndef ALGORITHMS_AND_DATA_STRUCTURES_UNIONFIND2_H
+#define ALGORITHMS_AND_DATA_STRUCTURES_UNIONFIND2_H
 
 #include <assert.h>
 
-namespace UnionFind1 {
+namespace UnionFind2 {
     class UnionFind {
     private:
         int count;
@@ -28,7 +28,11 @@ namespace UnionFind1 {
 
         int find(int p) {
             assert(p >= 0 && p < count);
-            return parent[p];
+
+            while (p != parent[p]) {
+                p = parent[p];
+            }
+            return p;
         }
 
         bool isConnected(int p, int q) {
@@ -42,14 +46,11 @@ namespace UnionFind1 {
             if (pId == qId) {
                 return;
             }
-            for (int i = 0; i < count; ++i) {
-                if (find(i) == pId) {
-                    parent[i] = qId;
-                }
-            }
+
+            parent[qId] = pId;
         }
 
     };
 }
 
-#endif //ALGORITHMS_AND_DATA_STRUCTURES_UNIONFIND1_H
+#endif //ALGORITHMS_AND_DATA_STRUCTURES_UNIONFIND2_H

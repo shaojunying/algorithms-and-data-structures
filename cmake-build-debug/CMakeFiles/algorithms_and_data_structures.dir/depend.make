@@ -3,5 +3,6 @@
 
 CMakeFiles/algorithms_and_data_structures.dir/main.cpp.obj: ../main.cpp
 CMakeFiles/algorithms_and_data_structures.dir/main.cpp.obj: ../unionFind/unionFind1.h
+CMakeFiles/algorithms_and_data_structures.dir/main.cpp.obj: ../unionFind/unionFind2.h
 CMakeFiles/algorithms_and_data_structures.dir/main.cpp.obj: ../unionFind/unionFindTestHelper.h
 

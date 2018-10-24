@@ -16,6 +16,10 @@ C:/Users/shao/Documents/codingProject/algorithms-and-data-structures/unionFind/u
 assert.h
 -
 
+C:/Users/shao/Documents/codingProject/algorithms-and-data-structures/unionFind/unionFind2.h
+assert.h
+-
+
 C:/Users/shao/Documents/codingProject/algorithms-and-data-structures/unionFind/unionFindTestHelper.h
 cstdlib
 -
@@ -25,4 +29,6 @@ iostream
 -
 unionFind1.h
 C:/Users/shao/Documents/codingProject/algorithms-and-data-structures/unionFind/unionFind1.h
+unionFind2.h
+C:/Users/shao/Documents/codingProject/algorithms-and-data-structures/unionFind/unionFind2.h
 
