@@ -94,6 +94,12 @@
 		<Unit filename="C:/Users/shao/Documents/codingProject/algorithms-and-data-structures/main.cpp">
 			<Option target="algorithms_and_data_structures"/>
 		</Unit>
+		<Unit filename="C:/Users/shao/Documents/codingProject/algorithms-and-data-structures/unionFind/unionFind1.h">
+			<Option target="algorithms_and_data_structures"/>
+		</Unit>
+		<Unit filename="C:/Users/shao/Documents/codingProject/algorithms-and-data-structures/unionFind/unionFindTestHelper.h">
+			<Option target="algorithms_and_data_structures"/>
+		</Unit>
 		<Unit filename="C:/Users/shao/Documents/codingProject/algorithms-and-data-structures/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
