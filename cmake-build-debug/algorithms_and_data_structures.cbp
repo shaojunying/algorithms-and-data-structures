@@ -100,6 +100,9 @@
 		<Unit filename="C:/Users/shao/Documents/codingProject/algorithms-and-data-structures/unionFind/unionFind2.h">
 			<Option target="algorithms_and_data_structures"/>
 		</Unit>
+		<Unit filename="C:/Users/shao/Documents/codingProject/algorithms-and-data-structures/unionFind/unionFind3.h">
+			<Option target="algorithms_and_data_structures"/>
+		</Unit>
 		<Unit filename="C:/Users/shao/Documents/codingProject/algorithms-and-data-structures/unionFind/unionFindTestHelper.h">
 			<Option target="algorithms_and_data_structures"/>
 		</Unit>
