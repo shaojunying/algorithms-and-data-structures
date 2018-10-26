@@ -106,12 +106,6 @@
 		<Unit filename="C:/Users/shao/Documents/codingProject/algorithms-and-data-structures/unionFind/unionFind4.h">
 			<Option target="algorithms_and_data_structures"/>
 		</Unit>
-		<Unit filename="C:/Users/shao/Documents/codingProject/algorithms-and-data-structures/unionFind/unionFind5.h">
-			<Option target="algorithms_and_data_structures"/>
-		</Unit>
-		<Unit filename="C:/Users/shao/Documents/codingProject/algorithms-and-data-structures/unionFind/unionFind6.h">
-			<Option target="algorithms_and_data_structures"/>
-		</Unit>
 		<Unit filename="C:/Users/shao/Documents/codingProject/algorithms-and-data-structures/unionFind/unionFindTestHelper.h">
 			<Option target="algorithms_and_data_structures"/>
 		</Unit>
