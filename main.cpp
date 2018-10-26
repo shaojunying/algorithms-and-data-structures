@@ -11,6 +11,7 @@ int main() {
 //    unionFindTestHelper.testUnionFind1(n);
 //    unionFindTestHelper.testUnionFind2(n);
     unionFindTestHelper.testUnionFind3(n);
+    unionFindTestHelper.testUnionFind4(n);
 
 
     return 0;

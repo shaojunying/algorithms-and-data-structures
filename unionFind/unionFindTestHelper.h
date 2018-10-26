@@ -11,6 +11,7 @@
 #include "unionFind1.h"
 #include "unionFind2.h"
 #include "unionFind3.h"
+#include "unionFind4.h"
 
 class UnionFindTestHelper{
 public:
@@ -54,7 +55,7 @@ public:
             unionFind.isConnected(p,q);
         }
         time_t endTime = clock();
-        std::cout<<"UF1 "<<n*2<<" ops: "<<double(endTime-startTime)/CLOCKS_PER_SEC<<"s"<<std::endl;
+        std::cout<<"UF2 "<<n*2<<" ops: "<<double(endTime-startTime)/CLOCKS_PER_SEC<<"s"<<std::endl;
     }
 
 
@@ -76,7 +77,29 @@ public:
             unionFind.isConnected(p,q);
         }
         time_t endTime = clock();
-        std::cout<<"UF1 "<<n*2<<" ops: "<<double(endTime-startTime)/CLOCKS_PER_SEC<<"s"<<std::endl;
+        std::cout<<"UF3 "<<n*2<<" ops: "<<double(endTime-startTime)/CLOCKS_PER_SEC<<"s"<<std::endl;
+    }
+
+
+    void testUnionFind4(int n){
+        srand(time(nullptr));
+
+        UnionFind4::UnionFind unionFind = UnionFind4::UnionFind(n);
+
+        time_t startTime = clock();
+
+        for (int i = 0; i < n; ++i) {
+            int p = rand()%n;
+            int q = rand()%n;
+            unionFind.unionElements(p,q);
+        }
+        for (int j = 0; j < n; ++j) {
+            int p = rand()%n;
+            int q = rand()%n;
+            unionFind.isConnected(p,q);
+        }
+        time_t endTime = clock();
+        std::cout<<"UF4 "<<n*2<<" ops: "<<double(endTime-startTime)/CLOCKS_PER_SEC<<"s"<<std::endl;
     }
 };
 
