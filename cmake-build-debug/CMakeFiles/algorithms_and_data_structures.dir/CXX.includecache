@@ -6,11 +6,23 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/shao/Documents/codingProject/algorithms-and-data-structures/binary-tree/binarySearch.h
+assert.h
+-
+
+C:/Users/shao/Documents/codingProject/algorithms-and-data-structures/binary-tree/binaryTreeTest.h
+binarySearch.h
+C:/Users/shao/Documents/codingProject/algorithms-and-data-structures/binary-tree/binarySearch.h
+iostream
+-
+
 C:/Users/shao/Documents/codingProject/algorithms-and-data-structures/main.cpp
 iostream
 -
 unionFind/unionFindTestHelper.h
 C:/Users/shao/Documents/codingProject/algorithms-and-data-structures/unionFind/unionFindTestHelper.h
+binary-tree/binaryTreeTest.h
+C:/Users/shao/Documents/codingProject/algorithms-and-data-structures/binary-tree/binaryTreeTest.h
 
 C:/Users/shao/Documents/codingProject/algorithms-and-data-structures/unionFind/unionFind1.h
 assert.h
