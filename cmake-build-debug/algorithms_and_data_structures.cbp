@@ -85,6 +85,9 @@
 		<Unit filename="C:/Users/shao/Documents/codingProject/algorithms-and-data-structures/binary-tree/binarySearch.h">
 			<Option target="algorithms_and_data_structures"/>
 		</Unit>
+		<Unit filename="C:/Users/shao/Documents/codingProject/algorithms-and-data-structures/binary-tree/binaryTree.h">
+			<Option target="algorithms_and_data_structures"/>
+		</Unit>
 		<Unit filename="C:/Users/shao/Documents/codingProject/algorithms-and-data-structures/binary-tree/binaryTreeTest.h">
 			<Option target="algorithms_and_data_structures"/>
 		</Unit>

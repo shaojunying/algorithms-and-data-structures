@@ -1,4 +1,4 @@
-C:\Users\shao\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\182.4505.18\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" C:\Users\shao\Documents\codingProject\algorithms-and-data-structures
+C:\Users\shao\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\182.4892.24\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" C:\Users\shao\Documents\codingProject\algorithms-and-data-structures
 -- Configuring done
 -- Generating done
 -- Build files have been written to: C:/Users/shao/Documents/codingProject/algorithms-and-data-structures/cmake-build-debug
