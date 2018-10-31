@@ -164,8 +164,87 @@ public:
         }
     }
 
+    /*
+     * floor函数,寻找二叉树中小于key值的最大节点
+     * */
+
+    Key* floor(Key key){
+        if (count<1||key<findMin()){
+            /*如果目标key小于树中任意一个节点,那么结果一定不存在,返回null*/
+            return nullptr;
+        }
+
+        Node* resultNode = floor(root,key);
+        if (resultNode == nullptr){
+            return nullptr;
+        }
+        return &(resultNode->key);
+    }
+
+    /*
+     * ceil函数,寻找二叉树中大于key值的最小节点
+     * */
+
+    Key* ceil(Key key){
+        if (count<1||key>findMax()){
+            return nullptr;
+        }
+
+        Node* resultNode = ceil(root,key);
+        if (resultNode == nullptr){
+            return nullptr;
+        }
+        return &(resultNode->key);
+    }
+
 
 private:
+
+    Node* ceil(Node* node,Key key){
+
+        if (node == nullptr){
+            return nullptr;
+        }
+
+        if (node->key == key){
+            return node;
+        } else if(node->key > key){
+            Node* currNode = node;
+            node = ceil(node->left,key);
+            if (node == nullptr){
+                return currNode;
+            }
+            return node;
+        } else{
+            return floor(node->right,key);
+        }
+    }
+    
+    /*要求的是当前节点node里面比key小的值中的最大值*/
+    Node* floor(Node* node,Key key){
+
+        if (node == nullptr){
+            /*到达根节点,直接返回null*/
+            return nullptr;
+        }
+
+        if (node->key == key){
+            /*当前节点的值和目标的值相等,直接返回当前节点*/
+            return node;
+        } else if(node->key < key){
+            /*当前节点的key值小于目标值,那么当前节点
+             * 说明当前节点可能就是目标值*/
+            Node* currNode = node;
+            node = floor(node->right,key);
+            if (node == nullptr){
+                return currNode;
+            }
+            return node;
+        } else{
+            /*当前节点的目标值太大,不满足,需要判断左节点*/
+            return floor(node->left,key);
+        }
+    }
 
     Node* findPredecessorFromAncestor(Node* node,Key key){
         /*如果当前节点的key值即为目标值,返回null*/
