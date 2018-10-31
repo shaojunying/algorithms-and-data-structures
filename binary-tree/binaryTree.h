@@ -17,6 +17,7 @@ private:
     struct Node{
         Key key;
         Value value;
+        int count = 0;
         Node* left;
         Node* right;
 
@@ -197,6 +198,10 @@ public:
         return &(resultNode->key);
     }
 
+    /*
+     *
+     * */
+
 
 private:
 
@@ -219,7 +224,7 @@ private:
             return floor(node->right,key);
         }
     }
-    
+
     /*要求的是当前节点node里面比key小的值中的最大值*/
     Node* floor(Node* node,Key key){
 
@@ -447,9 +452,9 @@ private:
         if (key == node->key){
             node->value=value;
         } else if(key < node->key){
-            insert(node->left,key,value);
+            node->left = insert(node->left,key,value);
         } else{
-            insert(node->right,key,value);
+            node->right = insert(node->right,key,value);
         }
         return node;
     }

@@ -80,17 +80,15 @@
 
   - 找出排名为n的元素
 
-- 实现支持重复元素的二叉搜索树
+- TODO
 
-  - 为每个节点增加一个count属性
-  - 需要维护insert,remove,rank,select
+  - 实现支持重复元素的二叉搜索树
 
-- 平衡二叉树和堆的结合 Treap
-
-- trie![1540965291790](C:\Users\shao\Documents\codingProject\algorithms-and-data-structures\binary-tree\trie)
-
-- 其他树
-
-  - kd树
-  - 区间树
-  - 哈夫曼树
+    - 为每个节点增加一个count属性
+    - 需要维护insert,remove,rank,select
+  - 平衡二叉树和堆的结合 Treap
+  - trie![1540965291790](C:\Users\shao\Documents\codingProject\algorithms-and-data-structures\binary-tree\trie)
+  - 其他树
+    - kd树
+    - 区间树
+    - 哈夫曼树
