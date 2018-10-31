@@ -7,6 +7,8 @@
 
 #include <iostream>
 #include <queue>
+#include <assert.h>
+
 using namespace std;
 
 template <typename Key,typename Value>
@@ -22,6 +24,12 @@ private:
             this->key=key;
             this->value=value;
             this->left=this->right= nullptr;
+        }
+        Node(Node* node){
+            this->key=node->left;
+            this->value=node->value;
+            this->left=node->value;
+            this->right=node->right;
         }
     };
     Node* root;
@@ -79,7 +87,215 @@ public:
             }
         }
     }
+
+//    查找最小值
+    Key findMin(){
+        assert(count>0);
+        Node* node = findMin(root);
+        return node->key;
+    }
+
+    /*
+     * 查找最大值
+     * return: 最大值对应的key值
+     * */
+    Key findMax(){
+        assert(count>0);
+        Node* node = findMax(root);
+        return node->key;
+    }
+
+    /*
+     * 删除最小值
+     * */
+    void removeMin(){
+        assert(count>0);
+        root = removeMin(root);
+    }
+
+
+    void removeMax(){
+        assert(count>0);
+        root = removeMax(root);
+    }
+
+    void remove(Key key){
+        remove(root,key);
+    }
+
+    /*
+     * 找出当前节点的后继结点
+     * */
+    Key* findSuccessor(Key key){
+        /*找到key值对应的节点*/
+        Node* node = search(key);
+        if (node == nullptr){
+            /*说明不存在key对应的节点*/
+            return nullptr;
+        } else if (node->right==nullptr){
+            /* node没有右节点
+             * 说明该节点的后继节点在从root到node之间的路径上*/
+            return &(findSuccessorFromAncestor(root,key)->key);
+        } else{
+            /*有右子树,说明后继结点为右子树的最小值*/
+            Node* resultNode = findMin(node->right);
+            return resultNode== nullptr?nullptr:&(resultNode->key);
+        }
+    }
+
+
+    /*
+     * 找出当前节点的前驱结点
+     * */
+    Key* findPredecessor(Key key){
+        /*找到key值对应的节点*/
+        Node* node = search(key);
+        if (node == nullptr){
+            /*说明不存在key对应的节点*/
+            return nullptr;
+        } else if (node->left==nullptr){
+            /* node没有右节点
+             * 说明该节点的后继节点在从root到node之间的路径上*/
+            return &(findPredecessorFromAncestor(root,key)->key);
+        } else{
+            /*有右子树,说明后继结点为右子树的最小值*/
+            Node* resultNode = findMax(node->left);
+            return resultNode== nullptr?nullptr:&(resultNode->key);
+        }
+    }
+
+
 private:
+
+    Node* findPredecessorFromAncestor(Node* node,Key key){
+        /*如果当前节点的key值即为目标值,返回null*/
+        if (node->key == key){
+            return nullptr;
+        }
+
+        if (node->key>key){
+            return findSuccessorFromAncestor(node->left,key);
+        } else{
+            Node* curNode = node;
+            node = findSuccessorFromAncestor(node->right,key);
+            if (node== nullptr){
+                return curNode;
+            }
+            return node;
+        }
+    }
+
+    Node* findSuccessorFromAncestor(Node* node,Key key){
+        /*如果当前节点的key值即为目标值,返回null*/
+        if (node->key == key){
+            return nullptr;
+        }
+
+        if (node->key<key){
+            /*当前节点的值小于目标key,所以直接找当前节点的右子树即可*/
+            return findSuccessorFromAncestor(node->right,key);
+        } else{
+            /*节点的key大于目标key,有可能就是目标的后继结点*/
+            Node* curNode = node;
+            node = findSuccessorFromAncestor(node->left,key);
+            if (node== nullptr){
+                return curNode;
+            }
+            return node;
+        }
+    }
+
+    Node* remove(Node* node, Key key){
+//        当前节点为空，说明不存在key值为key的节点
+        if (node == nullptr){
+            return nullptr;
+        }
+
+//      要找的key值只有可能在左子树上
+        if (node->key > key){
+            node->left = remove(node->left,key);
+        } else if(node->key < key){
+            node->right = remove(node->right,key);
+        } else{
+//            找到了key对应的节点
+            if (node->left == nullptr){
+//                左子树为空
+                Node* rightNode = node->right;
+                delete node;
+                count--;
+                return rightNode;
+            } else if (node->right == nullptr){
+                Node* leftNode = node->left;
+                delete node;
+                count--;
+                return leftNode;
+            } else{
+//                左右子树都不为空
+//                记录要删除的节点
+                Node* delNode = node;
+//                找到右子树对应的最小值深拷贝存储起来
+                Node* rightMinNode = new Node(findMin(delNode->right));
+                count++;
+//                删除右子树的最小节点
+                rightMinNode->right = removeMin(delNode->right);
+//                将新节点的左右孩子分别指向被删除节点左右子树
+                rightMinNode->left=delNode->left;
+
+                delete delNode;
+                count--;
+//                返回
+                return rightMinNode;
+            }
+        }
+
+    }
+
+
+    /*
+     * 删除以node为根的树的最小值
+     * return: 当前的根节点
+     * */
+    Node* removeMin(Node* node){
+        if (node->left==nullptr){
+            Node* leftNode = node->right;
+            delete node;
+            count--;
+            return leftNode;
+        }
+        node->left = removeMin(node->left);
+        return node;
+    }
+
+    Node* removeMax(Node* node){
+        if (node->right==nullptr){
+            Node* rightNode = node->left;
+            delete node;
+            count--;
+            return rightNode;
+        }
+        node->right = removeMin(node->right);
+        return node;
+    }
+
+    /*
+     * 返回最小值对应的节点地址
+     * */
+    Node* findMin(Node* node){
+        assert(node!= nullptr);
+        if (node->left==nullptr){
+            return node;
+        }
+        return findMin(node->left);
+    }
+
+
+    Node* findMax(Node* node){
+        assert(node!=nullptr);
+        if (node->right==nullptr){
+            return node;
+        }
+        return findMax(node->right);
+    }
 
     void destory(Node* node){
         if (node!=nullptr){
@@ -128,13 +344,13 @@ private:
         }
     }
 
-    Value* search(Node* node,Key key){
+    Node* search(Node* node,Key key){
         if (node == nullptr){
             return nullptr;
         }
 
         if (node->key == key){
-            return &(node->value);
+            return node;
         } else if(node->key>key){
             search(node->left,key);
         } else {
